@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="589b97fc-ab70-4498-9109-c2d00d77c999" name="local-server" url="http://localhost">
+        <fileTransfer mountedRoot="C:\Users\olive\js-projects\random-quotes" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -22,4 +22,4 @@ for(let element of sheet1.data ) {
     allQuotes.push(element[0]);
 }
 allQuotes = allQuotes.slice(4, allQuotes.length - 1);
-console.log(allQuotes);
+
