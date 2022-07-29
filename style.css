@@ -11,6 +11,7 @@ html, body {
 body {
     font-size: 1.4rem;
     text-rendering: optimizeLegibility;
+    background-color: #000f49;
 }
 /* sets the base font size for the document; turns on kerning pairs and ligatures */
 
@@ -18,9 +19,13 @@ body, ul, ol, dl {
     margin: 0;
 }
 
+h1, h3{
+    color: #ffffff;
+    text-align: center;
+}
+
 h1 {
-    font-size: 1.4rem;
-    color: #05faa7
+    font-size: 2.2rem;
 }
 /* begins to set up font sizes relative to base rem – h1 has been used as an example */
 
@@ -32,4 +37,27 @@ p {
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+}
+
+textarea {
+    resize: vertical;
+    display: inline;
+    text-align: center;
+}
+/* changes textarea resizing from "both" (UA default) to vertical only */
+
+.container {
+    height: 200px;
+    position: relative;
+    border: 3px solid rgba(255, 255, 255, 0.62);
+    /*background-color: rgba(255, 255, 255, 0.58);*/
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
