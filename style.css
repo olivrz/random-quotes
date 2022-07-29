@@ -29,6 +29,11 @@ h1 {
 }
 /* begins to set up font sizes relative to base rem – h1 has been used as an example */
 
+h3 {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
 p {
     -ms-word-break: break-all;
     word-break: break-all;
@@ -39,15 +44,8 @@ p {
     hyphens: auto;
 }
 
-textarea {
-    resize: vertical;
-    display: inline;
-    text-align: center;
-}
-/* changes textarea resizing from "both" (UA default) to vertical only */
-
 .container {
-    height: 200px;
+    height: 400px;
     position: relative;
     border: 3px solid rgba(255, 255, 255, 0.62);
     /*background-color: rgba(255, 255, 255, 0.58);*/
@@ -56,8 +54,11 @@ textarea {
 .center {
     margin: 0;
     position: absolute;
-    top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 500%);
+}
+
+.quote-button {
+    position:fixed;
+    bottom: 0;
 }

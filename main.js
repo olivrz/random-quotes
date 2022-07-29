@@ -1,36 +1,15 @@
-//npm xlsx package is used to parse the excel file containing quotes
-const xlsx = require('xlsx');
-
-const parseExcel = (filename) => {
-
-    const excelData = xlsx.readFile(filename);
-    return Object.keys(excelData.Sheets).map( (name, index, array) =>
-        ({
-        name,
-        data: xlsx.utils.sheet_to_json(excelData.Sheets[name], {header: 1, skipHeader: true})
-    }) );
-
-};
-
-const excelData = parseExcel("./quotes-database.xlsx");/*.forEach(element => {
-    console.log(element.data[4][0]);
-});*/
-const sheet1 = excelData[0];
-
-let allQuotes = [];
-for(let element of sheet1.data ) {
-    allQuotes.push(element[0]);
-}
-allQuotes = allQuotes.slice(4, allQuotes.length - 1);
+//Retrieve list of quotes from quotes.json file
+const quotes = await $.getJSON('./quotes.json');
 
 const button = document.querySelector('#quote-button');
 const quoteLine = document.querySelector('#quote-box');
 
 function onButton() {
     console.log('button pressed');
-    const randomIndex = math.floor( math.random() * allQuotes.length - 1);
-    const newQuote = allQuotes[randomIndex];
+    const randomIndex = Math.floor( Math.random() * quotes.length - 1);
+    const newQuote = quotes[randomIndex];
 
     quoteLine.innerHTML = newQuote;
 
 }
+button.addEventListener("click", onButton);
