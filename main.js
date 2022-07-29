@@ -23,3 +23,14 @@ for(let element of sheet1.data ) {
 }
 allQuotes = allQuotes.slice(4, allQuotes.length - 1);
 
+const button = document.querySelector('#quote-button');
+const quoteLine = document.querySelector('#quote-box');
+
+function onButton() {
+    console.log('button pressed');
+    const randomIndex = math.floor( math.random() * allQuotes.length - 1);
+    const newQuote = allQuotes[randomIndex];
+
+    quoteLine.innerHTML = newQuote;
+
+}
